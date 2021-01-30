@@ -14,9 +14,6 @@ public:
 
     void onDrawFrame() override;
 
-    void onSurfaceChanged(int width, int height) override;
-
-    void onSurfaceCreated() override;
 };
 
 #endif

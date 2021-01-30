@@ -32,7 +32,7 @@ char fShaderStr[] =
         "}                                            \n";
 
 
-TriangleRender::TriangleRender() {
+TriangleRender::TriangleRender() : Render() {
     static const GLfloat vertices[NumVertices][2] = {
             {0,    0.5},
             {-0.5, -0.5},
@@ -61,15 +61,6 @@ TriangleRender::~TriangleRender() {
     __android_log_print(ANDROID_LOG_INFO, "TriangleRender",
                         "TriangleRender::~TriangleRender is invoking!");
 }
-
-void TriangleRender::onSurfaceCreated() {
-    glClearColor(1.0f, 1.0f, 0.5f, 1.0f);
-}
-
-void TriangleRender::onSurfaceChanged(int width, int height) {
-    glViewport(0, 0, width, height);
-}
-
 
 void TriangleRender::onDrawFrame() {
     const GLfloat black[] = {0.99, 0.99, 0.99, 1};

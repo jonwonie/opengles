@@ -8,9 +8,15 @@
 class Render {
 
 public:
-    virtual void onSurfaceCreated() = 0;
+    virtual ~Render() {};
 
-    virtual void onSurfaceChanged(int width, int height) = 0;
+    void onSurfaceCreated() {
+        glClearColor(1.0f, 1.0f, 0.5f, 1.0f);
+    };
+
+    void onSurfaceChanged(int width, int height) {
+        glViewport(0, 0, width, height);
+    };
 
     virtual void onDrawFrame() = 0;
 };

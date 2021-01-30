@@ -57,7 +57,7 @@ public class ExGLSurfaceView extends GLSurfaceView {
         }
         this.type = type;
         setRenderer(new ExGLSurfaceRender(exRender, type));
-        setRenderMode(RENDERMODE_CONTINUOUSLY);
+        setRenderMode(RENDERMODE_WHEN_DIRTY);
     }
 
     @Override
